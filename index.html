@@ -1,7 +1,23 @@
 <body class="dark-backdrop">
-  <img src="Magglic.jpg" class="responsive"/>
+  <img onclick="playaudio()" src="Magglic.jpg" class="responsive"/>
+  <audio id="music" autoplay controls class="center">
+    <source src="my-mind.mp3" type="audio/mpeg"/>
+  </audio>
 </body>
+
+<script>
+  function playaudio() {
+	  console.log('Clicked!');
+    var audio = document.getElementById('music');
+    audio.play();
+  }
+</script>
+
 <style>
+  .center {
+    display: block;
+    margin: 0 auto;
+  }
   .responsive {
     max-width: 400px;
     width: 100%;
